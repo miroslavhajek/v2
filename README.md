@@ -1,7 +1,7 @@
 v2
 ==
 
-Vivo 2.0 Community Edition
+Vivo 2.0 Community Project
 
 Prerequisities
 --------------
