@@ -1,7 +1,0 @@
-<phpunit bootstrap="./bootstrap.php" colors="true" backupGlobals="false">
-	<testsuites>
-		<testsuite name="Vivo CMS V2 Test Suite">
-			<directory>./VivoTest</directory>
-		</testsuite>
-	</testsuites>
-</phpunit>
