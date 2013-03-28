@@ -20,4 +20,34 @@ return array(
         'date.timezone'                 => 'Europe/Prague',
         'mbstring.internal_encoding'    => 'UTF-8',
     ),
+    'logger' => array(
+        'writers' => array (
+            //writers from writer plugin manager
+            'default_log'   => array(
+                'priority'  => 1,
+                'options'   => array(
+                    'log_dir'   => __DIR__ . '/../../data/logs',
+                ),
+            ),
+        ),
+    ),
+    //Vivo Modules configuration
+    'modules'   => array(
+        'storage'   => array(
+            'class'     => 'Vivo\Storage\LocalFileSystemStorage',
+            'options'   => array(
+                'root'          => __DIR__ . '/../../vmodule',
+            ),
+        ),
+    ),
+    //Repository configuration
+    'repository'    => array(
+        //Storage for repository - configure in global/local config
+        'storage'              => array(
+            'class'     => 'Vivo\Storage\LocalFileSystemStorage',
+            'options'   => array(
+                'root'          => __DIR__ . '/../../data/repository',
+            ),
+        ),
+    ),
 );

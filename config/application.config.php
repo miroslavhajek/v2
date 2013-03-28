@@ -15,6 +15,9 @@ return array(
         'module_paths' => array(
             './module',
             './vendor',
+            //TODO - Remove for production!
+//            'c:\Projects\LDG\Vivo2\zfmodules',
+//            'Vivo'  => 'c:\Projects\LDG\Vivo2\zfmodules\vivoportal',
         ),
     ),
 );

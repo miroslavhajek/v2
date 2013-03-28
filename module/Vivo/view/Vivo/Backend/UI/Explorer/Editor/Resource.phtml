@@ -1,7 +1,0 @@
-<? foreach ($resources as $i => $resource) : ?>
-    <?=++$i?>. <?=$resource?> <a href="<?=$this->actionUrl('delete', array('name'=>$resource))?>" title="Delete?">X</a><br>
-<? endforeach; ?>
-<?php
-$formType       = \DluTwBootstrap\Form\FormUtil::FORM_TYPE_HORIZONTAL;
-echo $this->formTwb($form, $formType);
-?>

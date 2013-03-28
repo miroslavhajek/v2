@@ -1,5 +1,5 @@
 {
-    "hash": "70f7bd5e306c981ddd94b7f2b112184c",
+    "hash": "8e4cc904393b8166b6c0b3f3e505de7f",
     "packages": [
         {
             "name": "dlu/dluphpsettings",
@@ -121,6 +121,7 @@
                     "Doctrine\\Common": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -144,7 +145,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -159,7 +160,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2012-09-20 05:55:18"
+            "time": "2012-09-19 22:55:18"
         },
         {
             "name": "doctrine/dbal",
@@ -378,6 +379,53 @@
             "time": "2013-03-01 06:43:14"
         },
         {
+            "name": "vivoportal/vivoportal",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vivoportal/vivoportal.git",
+                "reference": "c30982fc767b08d90a6c661dc3957b137eec6a62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/c30982fc767b08d90a6c661dc3957b137eec6a62",
+                "reference": "c30982fc767b08d90a6c661dc3957b137eec6a62",
+                "shasum": ""
+            },
+            "require": {
+                "dlu/dluphpsettings": ">=0.1.0",
+                "dlu/dlutwbootstrap": ">=0.1.4",
+                "doctrine/common": ">=2.2.0",
+                "doctrine/orm": ">=2.2.0",
+                "firephp/firephp-core": "dev-master",
+                "php": ">=5.3.3",
+                "webino/zf2nette-debug": ">=1",
+                "zendframework/zendframework": "=2.1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Vivo": "src/",
+                    "VivoTest": "tests/"
+                },
+                "classmap": [
+                    "./Module.php",
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Vivo Portal core module",
+            "homepage": "http://vivoportal.org/",
+            "keywords": [
+                "cms",
+                "zf2"
+            ],
+            "time": "2013-03-28 13:49:58"
+        },
+        {
             "name": "webino/zf2nette-debug",
             "version": "1.1.1",
             "source": {
@@ -408,6 +456,7 @@
                     "Module.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "New BSD License"
             ],
@@ -548,6 +597,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "vivoportal/vivoportal": 20,
         "firephp/firephp-core": 20
     },
     "platform": {
