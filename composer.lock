@@ -1,5 +1,5 @@
 {
-    "hash": "8e4cc904393b8166b6c0b3f3e505de7f",
+    "hash": "280f0d76d3bc081e50522e69e4224027",
     "packages": [
         {
             "name": "dlu/dluphpsettings",
@@ -384,12 +384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vivoportal/vivoportal.git",
-                "reference": "c30982fc767b08d90a6c661dc3957b137eec6a62"
+                "reference": "a529b63a58f28dd781cfd2d0b87e6f23398abf0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/c30982fc767b08d90a6c661dc3957b137eec6a62",
-                "reference": "c30982fc767b08d90a6c661dc3957b137eec6a62",
+                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/a529b63a58f28dd781cfd2d0b87e6f23398abf0b",
+                "reference": "a529b63a58f28dd781cfd2d0b87e6f23398abf0b",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "cms",
                 "zf2"
             ],
-            "time": "2013-03-28 13:49:58"
+            "time": "2013-03-29 10:01:14"
         },
         {
             "name": "webino/zf2nette-debug",
