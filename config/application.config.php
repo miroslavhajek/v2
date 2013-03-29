@@ -2,9 +2,10 @@
 return array(
     'modules' => array(
         'DluPhpSettings',
+        'Vp',
         'Vivo',
         'ZF2NetteDebug',
-        'ZendSearch',
+//        'ZendSearch',
         'ApacheSolr',
         'DluTwBootstrap',
     ),
@@ -15,9 +16,6 @@ return array(
         'module_paths' => array(
             './module',
             './vendor',
-            //TODO - Remove for production!
-//            'c:\Projects\LDG\Vivo2\zfmodules',
-//            'Vivo'  => 'c:\Projects\LDG\Vivo2\zfmodules\vivoportal',
         ),
     ),
 );
