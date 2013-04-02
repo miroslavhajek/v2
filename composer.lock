@@ -384,12 +384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vivoportal/vivoportal.git",
-                "reference": "a529b63a58f28dd781cfd2d0b87e6f23398abf0b"
+                "reference": "a47313548f40a071669c0e8d3758d7afaad0a298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/a529b63a58f28dd781cfd2d0b87e6f23398abf0b",
-                "reference": "a529b63a58f28dd781cfd2d0b87e6f23398abf0b",
+                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/a47313548f40a071669c0e8d3758d7afaad0a298",
+                "reference": "a47313548f40a071669c0e8d3758d7afaad0a298",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "cms",
                 "zf2"
             ],
-            "time": "2013-03-29 10:01:14"
+            "time": "2013-04-02 09:13:44"
         },
         {
             "name": "webino/zf2nette-debug",
