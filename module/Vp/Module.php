@@ -3,12 +3,13 @@ namespace Vp;
 
 use Vivo\Http\StreamResponseSender;
 use Vivo\Service\Listener\RegisterTemplateResolverListener;
-use Vivo\Service\Listener\RegisterViewHelpersListener;
+use Vivo\Service\Listener\InitializeViewHelpersListener;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\ResponseSender\SendResponseEvent;
 use Zend\ServiceManager\ServiceManager;
+use Zend\Mvc\SendResponseListener;
 
 class Module
 {
@@ -38,11 +39,12 @@ class Module
         $moduleStorage  = $sm->get('module_storage');
         $streamName     = $config['modules']['stream_name'];
         \Vivo\Module\StreamWrapper::register($streamName, $moduleStorage);
-        //Register template resolver and view helpers
+        //Register template resolver
         $eventManager->attach(MvcEvent::EVENT_ROUTE,
             array (new RegisterTemplateResolverListener(), 'registerTemplateResolver'));
+        //Initialize view helpers
         $eventManager->attach(MvcEvent::EVENT_ROUTE,
-            array (new RegisterViewHelpersListener(), 'registerViewHelpers'));
+            array (new InitializeViewHelpersListener(), 'initializeViewHelpers'));
         //Log the matched route
         $eventManager->attach(MvcEvent::EVENT_ROUTE,
             function ($e) use ($logger){
