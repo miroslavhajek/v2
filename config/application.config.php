@@ -6,7 +6,7 @@ return array(
         'Vivo',
         'ZF2NetteDebug',
 //        'ZendSearch',
-        'ApacheSolr',
+        'VpApacheSolr',
         'DluTwBootstrap',
     ),
     'module_listener_options' => array(
