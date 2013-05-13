@@ -59,7 +59,7 @@ class Module
         $sendResponseListener   = $sm->get('send_response_listener');
         $srlEvents              = $sendResponseListener->getEventManager();
         $streamResponseSender   = new StreamResponseSender();
-        $srlEvents->attach(SendResponseEvent::EVENT_SEND_RESPONSE, $streamResponseSender, -2500);
+        $srlEvents->attach(SendResponseEvent::EVENT_SEND_RESPONSE, $streamResponseSender, -500);
     }
 
     public function getConfig()
