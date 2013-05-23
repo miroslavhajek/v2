@@ -40,6 +40,24 @@ return array(
             ),
         ),
     ),
+    //Cache manager configuration - define in global/local config
+    'cache_manager'         => array(
+        //Cache for repository objects - storage: file system
+        'repository_fs'     => array(
+            //Options to pass to StorageFactory::factory()
+            'adapter'   => array(
+                'name'      => 'filesystem',
+                'options'   => array(
+                    'cache_dir' => __DIR__ . '/../../data/cache/repository',
+                    'namespace' => 'repo',
+                    'ttl'       => 86400 //86400 seconds = 1 day
+                ),
+            ),
+            'plugins'   => array(
+                'serializer'    => array(),
+            ),
+        ),
+    ),
     //Repository configuration
     'repository'    => array(
         //Storage for repository - configure in global/local config
@@ -49,5 +67,7 @@ return array(
                 'root'          => __DIR__ . '/../../data/repository',
             ),
         ),
+        //Cache
+        'cache'         => 'repository_fs',
     ),
 );
