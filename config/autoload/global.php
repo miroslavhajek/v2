@@ -50,7 +50,6 @@ return array(
                 'options'   => array(
                     'cache_dir' => __DIR__ . '/../../data/cache/repository',
                     'namespace' => 'repo',
-                    'ttl'       => 86400 //86400 seconds = 1 day
                 ),
             ),
             'plugins'   => array(
