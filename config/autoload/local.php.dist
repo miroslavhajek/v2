@@ -104,5 +104,4 @@ return array(
         //Default db source used for modules
         'default_db_source'     => 'vivo_db',
     ),
-
 );
