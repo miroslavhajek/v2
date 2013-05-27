@@ -56,7 +56,7 @@ return array(
                 'serializer'    => array(),
             ),
         ),
-        //Cache for navigation containers - storage: file system
+        //Cache for navigation containers
         'navigation'     => array(
             //Options to pass to StorageFactory::factory()
             'adapter'   => array(
@@ -64,6 +64,21 @@ return array(
                 'options'   => array(
                     'cache_dir' => __DIR__ . '/../../data/cache/navigation',
                     'namespace' => 'nav',
+                    'ttl'       => 600,
+                ),
+            ),
+            'plugins'   => array(
+                'serializer'    => array(),
+            ),
+        ),
+        //Cache for overview documents
+        'overview'     => array(
+            //Options to pass to StorageFactory::factory()
+            'adapter'   => array(
+                'name'      => 'filesystem',
+                'options'   => array(
+                    'cache_dir' => __DIR__ . '/../../data/cache/overview',
+                    'namespace' => 'overview',
                     'ttl'       => 600,
                 ),
             ),
@@ -83,5 +98,17 @@ return array(
         ),
         //Cache
         'cache'         => 'repository_fs',
+    ),
+    'cms'       => array(
+        'ui'        => array(
+            'Vivo\UI\Content\Navigation'    => array(
+                //Cache for navigation containers
+                'cache'     => 'navigation',
+            ),
+            'Vivo\UI\Content\Overview'      => array(
+                //Cache for overview pages
+                'cache'     => 'overview',
+            ),
+        ),
     ),
 );
