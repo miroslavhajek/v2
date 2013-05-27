@@ -56,6 +56,21 @@ return array(
                 'serializer'    => array(),
             ),
         ),
+        //Cache for navigation containers - storage: file system
+        'navigation'     => array(
+            //Options to pass to StorageFactory::factory()
+            'adapter'   => array(
+                'name'      => 'filesystem',
+                'options'   => array(
+                    'cache_dir' => __DIR__ . '/../../data/cache/navigation',
+                    'namespace' => 'nav',
+                    'ttl'       => 600,
+                ),
+            ),
+            'plugins'   => array(
+                'serializer'    => array(),
+            ),
+        ),
     ),
     //Repository configuration
     'repository'    => array(
