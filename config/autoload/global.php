@@ -56,8 +56,8 @@ return array(
                 'serializer'    => array(),
             ),
         ),
-        //Cache for navigation view models - storage: file system
-        'view_model_navigation'     => array(
+        //Cache for navigation containers - storage: file system
+        'navigation'     => array(
             //Options to pass to StorageFactory::factory()
             'adapter'   => array(
                 'name'      => 'filesystem',
