@@ -1,11 +1,11 @@
 <?php
 return array(
     'modules' => array(
+        'VpLogger',
+        'ZF2NetteDebug',
         'DluPhpSettings',
         'Vp',
         'Vivo',
-        'ZF2NetteDebug',
-//        'ZendSearch',
         'VpApacheSolr',
         'DluTwBootstrap',
     ),

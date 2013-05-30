@@ -1,9 +1,11 @@
 <?php
+//VpLogger module requires this constant defined as soon in the request processing as possible
+define('REQUEST_START', microtime(true));
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
-define('REQUEST_START', microtime(true));
 chdir(dirname(__DIR__));
 
 // Setup autoloading

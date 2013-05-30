@@ -5,6 +5,8 @@ use Vivo\Http\StreamResponseSender;
 use Vivo\Service\Listener\RegisterTemplateResolverListener;
 use Vivo\Service\Listener\InitializeViewHelpersListener;
 
+use VpLogger\Log\Logger;
+
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\ResponseSender\SendResponseEvent;
@@ -28,8 +30,17 @@ class Module
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
 
+        //Bootstrap session
+        $this->bootstrapSession($e);
+
         //Initialize logger
-        $logger = $sm->get('logger');
+        $logger = $sm->get('VpLogger\logger');
+
+        //Performance log
+        $eventManager->trigger('log', $this,
+            array ('message'    => 'VP Module (the Application) bootstrap start',
+                'priority'   => Logger::PERF_BASE));
+
         //Initialize translator
         $sm->get('translator');
         //Attach a listener to set up the SiteManager object
@@ -60,6 +71,11 @@ class Module
         $srlEvents              = $sendResponseListener->getEventManager();
         $streamResponseSender   = new StreamResponseSender();
         $srlEvents->attach(SendResponseEvent::EVENT_SEND_RESPONSE, $streamResponseSender, -500);
+
+        //Performance log
+        $eventManager->trigger('log', $this,
+            array ('message'    => 'VP Module (the Application) bootstrapped',
+                   'priority'   => Logger::PERF_BASE));
     }
 
     public function getConfig()
@@ -81,4 +97,14 @@ class Module
         );
     }
 
+    /**
+     * Bootstraps session
+     * @param $e
+     */
+    public function bootstrapSession($e)
+    {
+        /** @var $sessionManager \Zend\Session\SessionManager */
+        $sessionManager = $e->getApplication()->getServiceManager()->get('Zend\Session\SessionManager');
+        $sessionManager->start();
+    }
 }

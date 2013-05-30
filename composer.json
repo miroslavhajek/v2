@@ -12,6 +12,7 @@
         "php": ">=5.3.3",
         "vivoportal/vivoportal": "dev-develop",
         "vivoportal/vp-apachesolr": "dev-develop",
+        "vivoportal/vp-logger": "dev-develop",
         "firephp/firephp-core": "@dev"
     }
 }

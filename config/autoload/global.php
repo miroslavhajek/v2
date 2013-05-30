@@ -20,14 +20,82 @@ return array(
         'date.timezone'                 => 'Europe/Prague',
         'mbstring.internal_encoding'    => 'UTF-8',
     ),
-    'logger' => array(
+    'VpLogger\logger' => array(
         'writers' => array (
-            //writers from writer plugin manager
-            'default_log'   => array(
+            //Writers from writer plugin manager
+            'error_log'   => array(
+                'enabled'   => true,
                 'priority'  => 1,
                 'options'   => array(
-                    'log_dir'   => __DIR__ . '/../../data/logs',
+                    'log_dir'       => __DIR__ . '/../../data/logs',
+                    'log_name'      => 'vivo_error',
+                    'priority_min'  => null,
+                    'priority_max'  => VpLogger\Log\Logger::NOTICE,
+                    'events'        => array(
+                        'allow'         => array(
+                            //'all'           => array('*', '*'),
+                        ),
+                        'block'         => array(
+                        ),
+                    ),
+                    //'format'        => null,
                 ),
+            ),
+            'perf_log'      => array(
+                'enabled'   => false,
+                'enable_by_session' => false,
+                'session'   => array(
+                    'namespace' => 'VpLogger',
+                    'var'       => 'perf_log',
+                ),
+                'priority'  => 2,
+                'options'   => array(
+                    'log_dir'   => __DIR__ . '/../../data/logs',
+                    'log_name'      => 'vivo_perf',
+//                    'priority_min'  => null, //VpLogger\Log\Logger::PERF_BASE,
+//                    'priority_max'  => VpLogger\Log\Logger::PERF_FINEST,
+                    'events'        => array(
+                        'allow'         => array(
+                            //'all'           => array('*', '*'),
+//                            'all'       => null,
+//                            'cache'     => array('Zend\Cache\Storage\Adapter\Filesystem', '*'),
+                        ),
+                        'block'         => array(
+                        ),
+                    ),
+                    //'format'    => null,
+                ),
+            ),
+            'firephp_log'      => array(
+                'enabled'   => false,
+                'enable_by_session' => false,
+                'session'   => array(
+                    'namespace' => 'VpLogger',
+                    'var'       => 'firephp_log',
+                ),
+                'priority'  => 3,
+                'options'   => array(
+                    'priority_min'  => null, //VpLogger\Log\Logger::PERF_BASE,
+                    'priority_max'  => VpLogger\Log\Logger::PERF_FINEST,
+                    'events'        => array(
+                        'allow'         => array(
+                            //'all'           => array('*', '*'),
+                            //'all'       => null,
+                            //'cache'     => array('Zend\Cache\Storage\Adapter\Filesystem', 'removeItem.pre'),
+                        ),
+                        'block'         => array(
+                            //'cache'     => array('Zend\Cache\Storage\Adapter\Filesystem', '*'),
+                        ),
+                    ),
+                    //'format'    => null,
+                ),
+            ),
+        ),
+        'writer_plugin_manager' => array(
+            'factories'     => array(
+                'error_log'         => 'VpLogger\Log\DailyLogFileWriterFactory',
+                'perf_log'          => 'VpLogger\Log\PerRequestLogFileWriterFactory',
+                'firephp_log'       => 'VpLogger\Log\FirePhpWriterFactory',
             ),
         ),
     ),
