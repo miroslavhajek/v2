@@ -1,2 +1,2 @@
 #!/bin/sh
-php ../public/index.php $@ 
+php -q $(dirname $0)/../public/index.php $@ 
