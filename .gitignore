@@ -9,3 +9,6 @@ nbproject
 composer.phar
 *local*
 vendor/
+config/application.config.php
+composer.json
+composer.lock
