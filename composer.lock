@@ -1,5 +1,9 @@
 {
-    "hash": "26bfe31a1e19c553b2da85c6ff605995",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "81b233633a5a72af5dfd7350182c4192",
     "packages": [
         {
             "name": "dlu/dluphpsettings",
@@ -164,16 +168,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "2.3.3"
+                "reference": "2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.3",
-                "reference": "2.3.3",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.4",
+                "reference": "2.3.4",
                 "shasum": ""
             },
             "require": {
@@ -223,20 +227,20 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-03-24 19:16:29"
+            "time": "2013-05-11 07:45:37"
         },
         {
             "name": "doctrine/orm",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "2.3.3"
+                "reference": "2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.3",
-                "reference": "2.3.3",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.4",
+                "reference": "2.3.4",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +297,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-03-24 20:43:58"
+            "time": "2013-05-11 07:51:12"
         },
         {
             "name": "firephp/firephp-core",
@@ -384,12 +388,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vivoportal/vivoportal.git",
-                "reference": "b82cc690f61f1ae3d7646b88f16b78a8401a69ae"
+                "reference": "4ce6938b6d4e20a84f229103e7f06f56f9b233d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/b82cc690f61f1ae3d7646b88f16b78a8401a69ae",
-                "reference": "b82cc690f61f1ae3d7646b88f16b78a8401a69ae",
+                "url": "https://api.github.com/repos/vivoportal/vivoportal/zipball/4ce6938b6d4e20a84f229103e7f06f56f9b233d9",
+                "reference": "4ce6938b6d4e20a84f229103e7f06f56f9b233d9",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +427,7 @@
                 "cms",
                 "zf2"
             ],
-            "time": "2013-05-09 07:03:36"
+            "time": "2013-05-27 14:09:33"
         },
         {
             "name": "vivoportal/vp-apachesolr",
@@ -462,6 +466,46 @@
                 "zf2"
             ],
             "time": "2013-05-09 11:46:36"
+        },
+        {
+            "name": "vivoportal/vp-logger",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vivoportal/VpLogger.git",
+                "reference": "432c1984b683d8d37d06e13412d66672e709be31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vivoportal/VpLogger/zipball/432c1984b683d8d37d06e13412d66672e709be31",
+                "reference": "432c1984b683d8d37d06e13412d66672e709be31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zendframework": ">=2.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "VpLogger": "src/"
+                },
+                "classmap": [
+                    "./Module.php",
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Vivo Portal Logger module",
+            "homepage": "http://vivoportal.org/",
+            "keywords": [
+                "logger",
+                "zf2"
+            ],
+            "time": "2013-05-29 12:48:08"
         },
         {
             "name": "webino/zf2nette-debug",
@@ -637,6 +681,7 @@
     "stability-flags": {
         "vivoportal/vivoportal": 20,
         "vivoportal/vp-apachesolr": 20,
+        "vivoportal/vp-logger": 20,
         "firephp/firephp-core": 20
     },
     "platform": {

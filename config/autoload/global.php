@@ -172,7 +172,7 @@ return array(
 //                ),
 //            ),
 //        ),
-//    ),
+    ),
 //    //Front controller configuration
 //    'front_controller'  => array(
 //        //Name of the cache used to cache the document output; set to null to disable
