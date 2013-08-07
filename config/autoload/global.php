@@ -99,6 +99,13 @@ return array(
             ),
         ),
     ),
+    //Core setup
+    'setup'     => array(
+        'ports'     => array(
+            'http'  => 80,
+            'https' => 443,
+        ),
+    ),
     //Vivo Modules configuration
     'modules'   => array(
         'storage'   => array(
@@ -154,7 +161,23 @@ return array(
                 'serializer'    => array(),
             ),
         ),
-    ),
+//        //Cache for document output
+//        'output'     => array(
+//            //Options to pass to StorageFactory::factory()
+//            'adapter'   => array(
+//                'name'      => 'filesystem',
+//                'options'   => array(
+//                    'cache_dir' => __DIR__ . '/../../data/cache/output',
+//                    'namespace' => 'output',
+//                ),
+//            ),
+//        ),
+//    ),
+//    //Front controller configuration
+//    'front_controller'  => array(
+//        //Name of the cache used to cache the document output; set to null to disable
+//        'output_cache'      => 'output',
+//    ),
     //Repository configuration
     'repository'    => array(
         //Storage for repository - configure in global/local config
