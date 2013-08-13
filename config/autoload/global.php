@@ -98,6 +98,9 @@ return array(
                 'firephp_log'       => 'VpLogger\Log\FirePhpWriterFactory',
             ),
         ),
+        //Profiler service - set to null to disable profiler
+        //Profiler is disabled in production
+        'profiler_service'  => null,
     ),
     //Core setup
     'setup'     => array(
@@ -161,6 +164,63 @@ return array(
                 'serializer'    => array(),
             ),
         ),
+        //Transliterator caching seems to slow down the processing instead of a boost!
+//        //Transliterator cache for path transliterator
+//        'translit_path'  => array(
+//            //Options to pass to StorageFactory::factory()
+//            'adapter'   => array(
+//                'name'      => 'filesystem',
+//                'options'   => array(
+//                    'cache_dir' => __DIR__ . '/../../data/cache/translit_path',
+//                    'namespace' => 'translit_path',
+//                ),
+//            ),
+//            'plugins'   => array(
+//                'serializer'    => array(),
+//            ),
+//        ),
+//        //Transliterator cache for url transliterator
+//        'translit_url'  => array(
+//            //Options to pass to StorageFactory::factory()
+//            'adapter'   => array(
+//                'name'      => 'filesystem',
+//                'options'   => array(
+//                    'cache_dir' => __DIR__ . '/../../data/cache/translit_url',
+//                    'namespace' => 'translit_url',
+//                ),
+//            ),
+//            'plugins'   => array(
+//                'serializer'    => array(),
+//            ),
+//        ),
+//        //Transliterator cache for mbstringcompare transliterator
+//        'translit_mbstringcompare'  => array(
+//            //Options to pass to StorageFactory::factory()
+//            'adapter'   => array(
+//                'name'      => 'filesystem',
+//                'options'   => array(
+//                    'cache_dir' => __DIR__ . '/../../data/cache/translit_mbstringcompare',
+//                    'namespace' => 'translit_mbstrcmp',
+//                ),
+//            ),
+//            'plugins'   => array(
+//                'serializer'    => array(),
+//            ),
+//        ),
+//        //Transliterator cache for doctitletopath transliterator
+//        'translit_doctitletopath'  => array(
+//            //Options to pass to StorageFactory::factory()
+//            'adapter'   => array(
+//                'name'      => 'filesystem',
+//                'options'   => array(
+//                    'cache_dir' => __DIR__ . '/../../data/cache/translit_doctitletopath',
+//                    'namespace' => 'translit_titletopath',
+//                ),
+//            ),
+//            'plugins'   => array(
+//                'serializer'    => array(),
+//            ),
+//        ),
 //        //Cache for document output
 //        'output'     => array(
 //            //Options to pass to StorageFactory::factory()
@@ -201,5 +261,22 @@ return array(
                 'cache'     => 'overview',
             ),
         ),
+    ),
+    //Transliterators configuration
+    //Transliterator caching seems to slow down the processing instead of a boost! - so turn the caches off!
+    'transliterator'    => array(
+        'path'              => array(
+            //'cache'             => 'translit_path',
+        ),
+        'url'              => array(
+            //'cache'             => 'translit_url',
+        ),
+        'doc_title_to_path' => array(
+            //'cache'             => 'translit_doctitletopath',
+        ),
+        'mb_string_compare' => array(
+            //'cache'             => 'translit_mbstringcompare',
+        ),
+
     ),
 );
