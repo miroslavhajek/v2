@@ -127,7 +127,6 @@ return array(
                 'name'      => 'filesystem',
                 'options'   => array(
                     'cache_dir' => __DIR__ . '/../../data/cache/repository',
-                    'namespace' => 'repo',
                 ),
             ),
             'plugins'   => array(
@@ -141,7 +140,6 @@ return array(
                 'name'      => 'filesystem',
                 'options'   => array(
                     'cache_dir' => __DIR__ . '/../../data/cache/navigation',
-                    'namespace' => 'nav',
                     'ttl'       => 600,
                 ),
             ),
@@ -156,7 +154,6 @@ return array(
                 'name'      => 'filesystem',
                 'options'   => array(
                     'cache_dir' => __DIR__ . '/../../data/cache/overview',
-                    'namespace' => 'overview',
                     'ttl'       => 600,
                 ),
             ),
@@ -172,7 +169,6 @@ return array(
 //                'name'      => 'filesystem',
 //                'options'   => array(
 //                    'cache_dir' => __DIR__ . '/../../data/cache/translit_path',
-//                    'namespace' => 'translit_path',
 //                ),
 //            ),
 //            'plugins'   => array(
@@ -186,7 +182,6 @@ return array(
 //                'name'      => 'filesystem',
 //                'options'   => array(
 //                    'cache_dir' => __DIR__ . '/../../data/cache/translit_url',
-//                    'namespace' => 'translit_url',
 //                ),
 //            ),
 //            'plugins'   => array(
@@ -200,7 +195,6 @@ return array(
 //                'name'      => 'filesystem',
 //                'options'   => array(
 //                    'cache_dir' => __DIR__ . '/../../data/cache/translit_mbstringcompare',
-//                    'namespace' => 'translit_mbstrcmp',
 //                ),
 //            ),
 //            'plugins'   => array(
@@ -214,7 +208,6 @@ return array(
 //                'name'      => 'filesystem',
 //                'options'   => array(
 //                    'cache_dir' => __DIR__ . '/../../data/cache/translit_doctitletopath',
-//                    'namespace' => 'translit_titletopath',
 //                ),
 //            ),
 //            'plugins'   => array(
@@ -228,7 +221,6 @@ return array(
 //                'name'      => 'filesystem',
 //                'options'   => array(
 //                    'cache_dir' => __DIR__ . '/../../data/cache/output',
-//                    'namespace' => 'output',
 //                ),
 //            ),
 //        ),
