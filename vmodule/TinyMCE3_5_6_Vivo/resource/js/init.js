@@ -30,7 +30,7 @@ function initTinyMce(mode, modeSpec, full, language, advancedStyles, blockFormat
         entity_encoding                     : "raw",
         //valid_elements : "*[*]",
         //extended_valid_elements : "*[*]",
-        extended_valid_elements             : "iframe[src|width|height|name|align]",
+        extended_valid_elements             : "iframe[src|width|height|name|align],i[class]",
         convert_urls                        : false,
         apply_source_formatting             : true,
         fix_list_elements                   : true,
