@@ -1,50 +1,32 @@
 <?php
 //Local cache configuration
 return array(
-    //Repository configuration - 'cache' items refer to the names of caches defined in cache_manager
-    //(see cache.global.php for the base cache definitions)
+    //Configuration of caches used for individual cache subjects
     //To turn cache off, set it to null: 'cache' => null
-    'repository'    => array(
-        //Repository cache
-        //'cache'     => null,
-        //'cache'         => 'repository_fs',
-    ),
-    'cms'       => array(
-        'ui'        => array(
-            'Vivo\UI\Content\Navigation'    => array(
-                //Cache for navigation containers
-                //'cache'     => null,
-                //'cache'     => 'navigation_fs',
-            ),
-            'Vivo\UI\Content\Overview'      => array(
-                //Cache for overview pages
-                //'cache'     => null,
-                //'cache'     => 'overview_fs',
-            ),
-        ),
+    'cache' => array(
+        //Use non-default repo cache
+        //'repository'                    => 'repository_zsdisk',
+        //Disable repo cache
+        //'repository'                    => null,
+
+        //Use non-default nav cache
+        //'navigation'                    => 'navigation_zsdisk',
+        //Disable nav cache
+        //'navigation'                    => null,
+
+        //Use non-default overview cache
+        //'overview'                      => 'overview_zsdisk',
+        //Disable overview cache
+        //'overview'                      => null,
+
+        //Transliteration caches are not normally used
+        //'translit_path'                 => null,
+        //'translit_url'                  => null,
+        //'translit_doc_title_to_path'    => null,
+        //'translit_mb_string_compare'    => null,
     ),
 
-    //Transliterator caching seems to slow down the processing instead of a boost! - so turn the caches off!
-    'transliterator'    => array(
-        'path'              => array(
-            'cache'             => null,
-            //'cache'             => 'translit_path_fs',
-        ),
-        'url'              => array(
-            'cache'             => null,
-            //'cache'             => 'translit_url_fs',
-        ),
-        'doc_title_to_path' => array(
-            'cache'             => null,
-            //'cache'             => 'translit_doctitletopath_fs',
-        ),
-        'mb_string_compare' => array(
-            'cache'             => null,
-            //'cache'             => 'translit_mbstringcompare_fs',
-        ),
-    ),
-
-    //Cache manager configuration - define caches here
+    //Cache manager configuration - define custom caches here
     'cache_manager'         => array(
         //Cache definition example
 //        'mycache_fs'     => array(
