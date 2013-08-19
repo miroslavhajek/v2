@@ -1,48 +1,16 @@
 <?php
 //Global configuration of caching
 return array(
-    //Repository configuration - 'cache' items refer to the names of caches defined in cache_manager (see below)
+    //Configuration of caches used for individual cache subjects
     //To turn cache off, set it to null: 'cache' => null
-    'repository'    => array(
-        //Repository cache - enable Filesystem cache by default
-        'cache'         => 'repository_fs',
-    ),
-    'cms'       => array(
-        'ui'        => array(
-            'Vivo\UI\Content\Navigation'    => array(
-                //Cache for navigation containers - enable Filesystem cache by default
-                'cache'     => 'navigation_fs',
-            ),
-            'Vivo\UI\Content\Overview'      => array(
-                //Cache for overview pages - enable Filesystem cache by default
-                'cache'     => 'overview_fs',
-            ),
-        ),
-    ),
-    //Front controller configuration
-    'front_controller'  => array(
-        //Disable the output cache by setting to null
-        'output_cache'      => null,
-        //'output_cache'      => 'output_fs',
-    ),
-    //Transliterator caching seems to slow down the processing instead of a boost! - so turn the caches off!
-    'transliterator'    => array(
-        'path'              => array(
-            'cache'             => null,
-            //'cache'             => 'translit_path_fs',
-        ),
-        'url'              => array(
-            'cache'             => null,
-            //'cache'             => 'translit_url_fs',
-        ),
-        'doc_title_to_path' => array(
-            'cache'             => null,
-            //'cache'             => 'translit_doctitletopath_fs',
-        ),
-        'mb_string_compare' => array(
-            'cache'             => null,
-            //'cache'             => 'translit_mbstringcompare_fs',
-        ),
+    'cache' => array(
+        'repository'                    => 'repository_fs',
+        'navigation'                    => 'navigation_fs',
+        'overview'                      => 'overview_fs',
+        'translit_path'                 => null,
+        'translit_url'                  => null,
+        'translit_doc_title_to_path'    => null,
+        'translit_mb_string_compare'    => null,
     ),
 
     //Cache manager configuration - define caches here
