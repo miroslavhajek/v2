@@ -24,7 +24,6 @@ return array(
             ),
         ),
     ),
-
     'db_service'    => array(
         'abstract_factory'  => array(
             'pdo'       => array(
@@ -74,8 +73,7 @@ return array(
 //                'replacementChar'   => '-'
 //            ),
 //        ),
-//    ),
-
+    ),
     'cms'  => array(
         'security_manager_db'  => array(
             'options'           => array(
